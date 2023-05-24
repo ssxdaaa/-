@@ -1,0 +1,20 @@
+#include <stdio.h>
+
+int main() {
+    double hryvnia_amount, foreign_currency_value, exchange_rate;
+
+    // Input the amount of Hryvnias and the value of the foreign currency
+    printf("Введіть суму в гривнях: ");
+    scanf("%lf", &hryvnia_amount);
+
+    printf("Введіть вартість іноземної валюти:");
+    scanf("%lf", &foreign_currency_value);
+
+    // Calculate the exchange rate
+    exchange_rate = foreign_currency_value / hryvnia_amount;
+
+    // Display the exchange rate
+    printf("Обмінний курс:%.2lf\n", exchange_rate);
+
+    return 0;
+}
