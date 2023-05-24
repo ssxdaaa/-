@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+#define SIZE 3
+
+void replaceDiagonal(int arr[][SIZE]) {
+    int i;
+
+    for (i = 0; i < SIZE; i++) {
+        if (arr[i][i] < 0) {
+            arr[i][i] = 1;
+        }
+    }
+}
+
+void printArray(int arr[][SIZE]) {
+    int i, j;
+
+    for (i = 0; i < SIZE; i++) {
+        for (j = 0; j < SIZE; j++) {
+            printf("%d ", arr[i][j]);
+        }
+        printf("\n");
+    }
+}
+
+int main() {
+    int arr[SIZE][SIZE];
+    int i, j;
+
+    printf("Введіть елементи 2D масиву:\n");
+
+    // Read the elements of the array from the user
+    for (i = 0; i < SIZE; i++) {
+        for (j = 0; j < SIZE; j++) {
+            scanf("%d", &arr[i][j]);
+        }
+    }
+
+    printf("Оригінальний масив:\n");
+    printArray(arr);
+
+    replaceDiagonal(arr);
+
+    printf("\nЗмінений масив:\n");
+    printArray(arr);
+
+    return 0;
+}
