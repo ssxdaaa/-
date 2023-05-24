@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+double calculateCost(int quantity, double pricePerPiece) {
+    double cost = quantity * pricePerPiece;
+    return cost;
+}
+
+int main() {
+    int quantity;
+    double pricePerPiece;
+
+    printf("Введіть кількість: ");
+    scanf("%d", &quantity);
+
+    printf("Введіть ціну за штуку: ");
+    scanf("%lf", &pricePerPiece);
+
+    double totalCost = calculateCost(quantity, pricePerPiece);
+
+    printf("Загальна вартість: %.2lf\n", totalCost);
+
+    return 0;
+}
