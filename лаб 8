@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <ctype.h>
+
+void replaceLowercase(char *str) {
+    while (*str) {
+        if (islower(*str)) {
+            *str = toupper(*str);
+        }
+        str++;
+    }
+}
+
+int main() {
+    char str[100];
+
+    printf("Введіть рядок:");
+    fgets(str, sizeof(str), stdin);
+
+    replaceLowercase(str);
+
+    printf("Результат: %s\n", str);
+
+    return 0;
+}
